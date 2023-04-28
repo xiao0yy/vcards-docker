@@ -1,0 +1,15 @@
+[r1]
+user: cn
+collection:
+permissions: R
+
+[r2]
+user: cn
+collection: cn
+permissions: R
+
+[r3]
+user: cn
+collection: cn/[^/]+
+permissions: r
+
