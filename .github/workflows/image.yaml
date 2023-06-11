@@ -3,6 +3,8 @@ name: image
 on:
   push:
     branches: [ "main" ]
+  schedule:
+    - cron: '0 18 * * *'
 
 permissions:
   contents: read
