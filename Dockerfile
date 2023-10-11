@@ -3,11 +3,11 @@ FROM node:16-alpine as builder
 RUN apk add --no-cache git
 # NO Version or Tag
 # Error: Command failed: git log -1 --pretty="format:%ci" /vCards/data/金融银行/湖北省农村信用社(农商银行).yaml
+# rm data/*/*\(*;
 RUN set -ex; \
     git clone --depth 1 https://github.com/metowolf/vCards /vCards; \
     cd /vCards; \
     npm install; \
-    rm data/*/*\(*; \
     npm run radicale
 
 FROM tomsquest/docker-radicale:3.1.8.2
