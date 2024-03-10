@@ -10,7 +10,7 @@ RUN set -ex; \
     npm install; \
     npm run radicale
 
-FROM tomsquest/docker-radicale:3.1.8.2
+FROM tomsquest/docker-radicale:3.1.8.3
 
 COPY --from=builder /vCards/radicale /data/collections/collection-root/cn
 COPY config /config/config
